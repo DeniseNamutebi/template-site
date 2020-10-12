@@ -1,0 +1,23 @@
+
+<div class="id__page">
+<div class="restaurant__display">
+<h1 id="restaurant__title">{{restaurant.name}}<span  ><a href="/restaurants/{{restaurant.id}}/edit" id="admin">Edit</a></span></h1>
+<div class="menu__image">
+<img src={{restaurant.image}}  width="100%" /></div>
+</div>
+
+<section class="menu__container">
+    {{#each menus}}
+   <h2 class="menu__title">{{this.title}}</h2> 
+        <ul>
+        {{#each this.items}}
+         <li><p>{{this.name}} - £{{this.price}}</p></li>
+        {{/each}}
+        
+        </ul>
+        <h1 id="restaurant__title">{{restaurant.name}}<span  ><a href="/restaurants/{{../restaurant_id}}/menus/{{menu.id}}/editp" id="admin">Edit</a></span></h1>
+    {{/each}}
+</section>
+</div>
+
+

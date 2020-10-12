@@ -1,0 +1,17 @@
+<div class="add__form">
+<form class= action="/restaurants/{{restaurant.id}}/edit" method="POST" class="add-form">
+    <div class="input-container1">
+        <label>Restaurant name:</label>
+        <input name="name" value="{{restaurant.name}}" />
+    </div>
+    <div class="input-container2">
+        <label>Restaurant image:</label>
+        <input name="image" value="{{restaurant.image}}"/>
+    </div>
+    <button>Update Restaurant</button>
+</form>
+ <a href="/restaurants/{{restaurant.id}}/edit/delete"><button id="delete-btn">Delete Restaurant</button></a>
+</div>
+
+
+

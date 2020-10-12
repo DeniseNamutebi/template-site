@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/styles.css" />
+    </head>
+        <nav>
+            <h3 id="logo">PRF</h3>
+            <div class="nav__links">
+            <a href="/" class="nav__link--one">Home</a>
+            <a href="#restaurants" class="nav__link--two">Restaurants</a>
+        </div>
+        </nav>
+        <body>
+        {{{body}}}
+        </body>
+
+        <div class="form-popup" id="myForm">
+        <form action="/restaurants" method="POST" class="form-container">
+            <h1>Create</h1>
+            <label for="name">Enter Restaurant Name:</label>
+            <input  name="name" type="text" >
+            <label for="url">Enter restuarant image url</label>
+                <input type="url" name="url">
+            <button type="submit" class="btn" >add</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+        </div>
+    
+        <footer>
+            <span>©Denise Namutebi</span><button class="open-button" onclick="openForm()">Open Form</button>
+        </footer>
+
+        <script>
+        function openForm() {
+        document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+        }
+        </script>
+</html>
