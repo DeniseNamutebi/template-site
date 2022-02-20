@@ -8,7 +8,6 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
 
-
 const handlebars = expressHandlebars({
     handlebars: allowInsecurePrototypeAccess(Handlebars)
 })
@@ -69,9 +68,6 @@ app.get('/restaurants/:id/edit/delete', async(req, res) => {
           await  restaurant.destroy()
             res.redirect('/')
 })
-
-
-
 
    
 app.listen(3000, async() => {
